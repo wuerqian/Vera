@@ -1,0 +1,337 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+  font-family: 'Microsoft JhengHei';
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(../image/首頁.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+header p{
+  font-size: 20px;
+  color: #ffffff;;
+  line-height: 1.6;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+nav {
+  padding: 0 20px;
+  width: 100%;
+  height: 55px;
+  color: #ffffff;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+nav h1 {
+  line-height: 55px;
+  display: inline-block;
+}
+nav ul {
+  margin-right: 20px;
+  list-style: disc;
+  float: right;
+}
+nav ul li {
+  padding-right: 30px;
+  line-height: 55px;
+  display: inline-block;
+}
+nav ul li a{
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li:hover a{
+  color: #f19600;
+}
+section {
+  text-align: center; 
+}
+section h2 p{
+  margin: 50px 0;
+  padding: 0 20px;
+  font-size: 36px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+section h2 p:before,
+section h2 p:after {
+  content: '';
+  width: 500px;
+  height: 1px;
+  background-color: #000000;
+  opacity: .5;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+}
+section h2 p:before {
+  right: 100%;
+}
+section h2 p:after {
+  left: 100%;
+}
+section h2 span{
+  font-size: 22px;
+  color: #f19600;
+  letter-spacing: 0;
+}
+.Collection ul{
+  max-width: 900px;
+  width: 100%;
+  font-size: 0;
+  display: inline-block;
+}
+.Collection ul li{
+  margin: 20px 3%;
+  width: 27.33333333%;
+  vertical-align: top;
+  display: inline-block;
+}
+.Collection ul li a{
+  text-decoration: none;
+}
+.Collection ul li img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #0007;
+}
+.Collection ul li h3{
+  margin-top: 10px;
+  font-size: 16px;
+  color: #646464;
+  line-height: 1.6;
+}
+.Collection ul li:hover img{
+  filter: opacity(60%);
+}
+.Collection ul li:hover h3{
+  color: #f19600;
+}
+.service{
+  background-image: linear-gradient(90deg, #944510, #bd7a45);
+  padding-bottom: 50px;
+}
+.service h2{
+  color: #ffffff;
+}
+.service h2 p:before,
+.service h2 p:after {
+  background-color: #ffffff;
+}
+.service-list {
+  margin: 0 auto;
+  width: 600px;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+}
+.service-list li {
+  position: relative;
+}
+.service-list li + li {
+  margin-top: 20px;
+}
+.service-list li:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(../image/check-mark.png);
+  background-size: cover;
+  display: inline-block; 
+  position: absolute;
+  top: 6px;
+  right: 100%;
+}
+.service-list li a{
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1.6;
+}
+.service-list li a span{
+  font-size: 20px;
+  font-weight: bolder;
+  vertical-align: sub;
+}
+.service-more {
+  padding: 5px 5px;
+  border-radius: 12px;
+  color: #000;
+  background-color: #ffffff;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+}
+.service-more:hover {
+  color: #f19600;
+}
+#Service-Content-ctrl{
+  display: none;
+}
+#Service-Content-ctrl:checked + #Service-Content{
+  display: block;
+}
+#Service-Content {
+  width: 100%;
+  height: 100vh;
+  background-color: #0009;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+#Service-Content .liaison-box{
+  width: 1250px;
+  height: 750px;
+  max-height: 80vh;
+  background-color: #ffffff;
+  transform: translate(-50%, -45%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.liaison-box-close{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.liaison-box-close:before,
+.liaison-box-close:after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: #646464;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.liaison-box-close:after {
+  transform: rotate(-45deg); 
+}
+#Service-Content .Service-title{
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+}
+#Service-Content .Service-text{
+  margin: 0 auto;
+  padding: 70px 0;
+  text-align: left;
+  display: inline-block;
+  line-height: 3;
+}
+#Service-Content .liaison-content{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#Service-Content .liaison-content span{
+  color: #000000;
+}
+#Service-Content .liaison-content p{
+  color: #ff0000;
+}
+#Service-Content .liaison-content .qrcode {
+  margin: 0;
+}
+.Process {
+  margin: 0 auto;
+  width: 90%;
+  height: 90vh;
+  background: url(../image/報價流程.jpg) no-repeat center bottom;
+  background-size: contain;
+}
+footer {
+  padding: 20px;
+  background-color: #000000;
+  text-align: center;
+}
+.liaison{
+  display: inline-block;
+  text-align: left;
+}
+.liaison div{
+  padding: 10px 20px 10px 0;
+  display: inline-block;
+}
+.liaison img{
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+.liaison span{
+  color: #ffffff;
+  vertical-align: middle;
+  letter-spacing: .2px;
+}
+.liaison .line-icon{
+  border-radius: 50%;
+}
+.liaison p{
+  padding: 20px 0;
+  color: #ffef00;
+  letter-spacing: 1px;
+}
+.qrcode{
+  margin-left: 80px;
+  width: 100px;
+  height: 100px;
+  background-image: url(../image/QR\ CODE.jpg);
+  background-size: cover;
+  vertical-align: top;
+  display: inline-block;
+}
