@@ -209,6 +209,7 @@ section h2 span{
   background-color: #ffffff;
   text-decoration: none;
   vertical-align: middle;
+  cursor: pointer;
   display: inline-block;
 }
 .service-more:hover {
