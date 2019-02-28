@@ -336,3 +336,329 @@ footer {
   vertical-align: top;
   display: inline-block;
 }
+/* ----------輪撥---------- */
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  overflow-x: hidden;
+}
+img {
+  outline: none;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+/*選單隱藏卷軸*/
+.hidescroll {
+  overflow: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+}
+html.hidescroll {
+  overflow: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: fixed !important;
+  width: 100%;
+  top: 0;
+}
+/*主視覺*/
+.banners,
+.bannersItem {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+.banners .sp,
+.bannersItem .sp {
+  width: 100%;
+  height: 420px;
+  display: block;
+  overflow: hidden;
+}
+@media (max-width: 1000px) {
+  .banners .sp,
+  .bannersItem .sp {
+    width: 100%;
+    height: 0;
+    margin-bottom: 42.85714286%;
+  }
+}
+.banners .left,
+.bannersItem .left {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100px;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  background: transparent url(../Images/Page/buttonleft.png) no-repeat left center;
+  text-indent: -10000px;
+  z-index: 2;
+  text-decoration: none;
+}
+@media (max-width: 1000px) {
+  .banners .left,
+  .bannersItem .left {
+    width: 50px;
+    left: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banners .left,
+  .bannersItem .left {
+    width: 20px;
+  }
+}
+.banners .right,
+.bannersItem .right {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 100px;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  background: transparent url(../Images/Page/buttonright.png) no-repeat right center;
+  text-indent: -10000px;
+  z-index: 2;
+  text-decoration: none;
+}
+@media (max-width: 1000px) {
+  .banners .right,
+  .bannersItem .right {
+    width: 50px;
+    left: auto;
+    right: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banners .right,
+  .bannersItem .right {
+    width: 20px;
+  }
+}
+.banners ol,
+.bannersItem ol {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .banners ol,
+  .bannersItem ol {
+    bottom: 0;
+  }
+}
+.banners ol li,
+.bannersItem ol li {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: 5px;
+}
+@media screen and (max-width: 768px) {
+  .banners ol li,
+  .bannersItem ol li {
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+  }
+}
+.banners ol li a,
+.bannersItem ol li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+.banners ol li a.active,
+.bannersItem ol li a.active {
+  background-color: #aaaaaa;
+}
+.banners .cover,
+.bannersItem .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+.banners .cover ul,
+.bannersItem .cover ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10000vw;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
+.banners .cover ul li,
+.bannersItem .cover ul li {
+  position: relative;
+  float: left;
+  width: 100vw;
+  height: 100%;
+  background: transparent url() no-repeat center center;
+  background-size: cover;
+}
+.banners .cover ul li > a,
+.bannersItem .cover ul li > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  text-indent: -10000px;
+}
+.banners .cover ul li > a.disable,
+.bannersItem .cover ul li > a.disable {
+  cursor: default;
+}
+.banners .cover ul li .videoiframe,
+.bannersItem .cover ul li .videoiframe {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  width: 622px;
+  height: 350px;
+  margin-left: -150px;
+  z-index: 1;
+  -moz-box-shadow: 0 1px 15px 0 rgba(102, 102, 102, 0.5);
+  -webkit-box-shadow: 0 1px 15px 0 rgba(102, 102, 102, 0.5);
+  box-shadow: 0 1px 15px 0 rgba(102, 102, 102, 0.5);
+}
+@media (max-width: 1000px) {
+  .banners .cover ul li .videoiframe,
+  .bannersItem .cover ul li .videoiframe {
+    left: auto;
+    right: 5%;
+    top: 7%;
+    height: 0;
+    width: 62.22%;
+    padding-bottom: 34.9875%;
+  }
+}
+.banners .cover ul li .videoiframe .videoplayer iframe,
+.bannersItem .cover ul li .videoiframe .videoplayer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+.banners .cover ul li .videoiframe .playbutton,
+.bannersItem .cover ul li .videoiframe .playbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 2;
+}
+.bannersBox {
+  margin: 40px auto;
+  width: 980px;
+}
+@media (max-width: 1000px) {
+  .bannersBox {
+    display: none;
+  }
+}
+.bannersBox:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.bannersBox > li {
+  width: 270px;
+  display: inline-block;
+  float: left;
+}
+.bannersBox > li + li {
+  margin-left: 85px;
+}
+.bannersBox .bannersTitle {
+  padding: 10px 0;
+  font-size: 20px;
+  color: #0c86c8;
+  font-weight: bold;
+  text-align: center;
+}
+.bannersBox .bannersItem {
+  min-height: 320px;
+  box-shadow: 0 3px 5px #bbb;
+  overflow: initial;
+}
+.bannersBox .bannersItem .sp {
+  height: 160px;
+}
+.bannersBox .bannersItem .left,
+.bannersBox .bannersItem .right {
+  width: 30px;
+  height: 160px;
+  background-size: 50%;
+  filter: invert(100%) brightness(120%);
+}
+.bannersBox .bannersItem .cover li {
+  background: transparent url() no-repeat center top;
+  background-size: 100% 160px;
+}
+.bannersBox .bannersItem .cover li a {
+  height: 160px;
+}
+.bannersBox .bannersItem ol {
+  bottom: 0px;
+  transform: translateY(35px);
+}
+.bannersBox .bannersItem ol li {
+  margin: 10px 5px;
+}
+.bannersBox .bannersItem ol li a {
+  background-color: #88b9d2;
+}
+.bannersBox .bannersItem ol li a.active {
+  background-color: #0c86c8;
+}
+.bannersBox .bannersText {
+  padding: 5px 10px;
+  line-height: 1.6;
+  word-break: break-all;
+}
