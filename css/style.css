@@ -44,6 +44,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.body-bg{
+  background-color: #000000ff;
+}
+.headerGoto{
+  padding-bottom: 50px;
+}
 header {
   width: 100%;
   height: 100vh;
@@ -159,7 +165,6 @@ section h2 span{
 }
 .service{
   background-image: linear-gradient(90deg, #944510, #bd7a45);
-  padding-bottom: 50px;
 }
 .service h2{
   color: #ffffff;
@@ -224,7 +229,7 @@ section h2 span{
 #Service-Content {
   width: 100%;
   height: 100vh;
-  background-color: #0009;
+  background-color: #000000dd;
   display: none;
   position: fixed;
   top: 0;
@@ -337,46 +342,6 @@ footer {
   display: inline-block;
 }
 /* ----------輪撥---------- */
-body {
-  font-family: 'Noto Sans TC', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  overflow-x: hidden;
-}
-img {
-  outline: none;
-  border: 0;
-}
-a {
-  text-decoration: none;
-  color: #000000;
-  font-family: 'Noto Sans TC', sans-serif;
-}
-/*選單隱藏卷軸*/
-.hidescroll {
-  overflow: hidden !important;
-  -webkit-overflow-scrolling: touch;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  position: fixed !important;
-  width: 100%;
-  top: 0;
-}
-html.hidescroll {
-  overflow: hidden !important;
-  -webkit-overflow-scrolling: touch;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  position: fixed !important;
-  width: 100%;
-  top: 0;
-}
-/*主視覺*/
 .banners,
 .bannersItem {
   position: relative;
@@ -408,8 +373,9 @@ html.hidescroll {
   height: 100%;
   display: none;
   overflow: hidden;
-  background: transparent url(../Images/Page/buttonleft.png) no-repeat left center;
+  background: transparent url(../image/buttonleft.png) no-repeat left center;
   text-indent: -10000px;
+  transform: translateX(-200%);
   z-index: 2;
   text-decoration: none;
 }
@@ -436,8 +402,9 @@ html.hidescroll {
   height: 100%;
   display: none;
   overflow: hidden;
-  background: transparent url(../Images/Page/buttonright.png) no-repeat right center;
+  background: transparent url(../image/buttonright.png) no-repeat right center;
   text-indent: -10000px;
+  transform: translateX(200%);
   z-index: 2;
   text-decoration: none;
 }
@@ -518,6 +485,7 @@ html.hidescroll {
   left: 0;
   width: 10000vw;
   height: 100%;
+  background-color: #fff;
   display: block;
   overflow: hidden;
   -moz-transition: all 0.5s ease-in-out;
@@ -595,7 +563,7 @@ html.hidescroll {
 }
 .bannersBox {
   margin: 40px auto;
-  width: 980px;
+  width: 1000px;
 }
 @media (max-width: 1000px) {
   .bannersBox {
@@ -608,7 +576,7 @@ html.hidescroll {
   clear: both;
 }
 .bannersBox > li {
-  width: 270px;
+  width: 1000px;
   display: inline-block;
   float: left;
 }
@@ -623,7 +591,7 @@ html.hidescroll {
   text-align: center;
 }
 .bannersBox .bannersItem {
-  min-height: 320px;
+  min-height: 640px;
   box-shadow: 0 3px 5px #bbb;
   overflow: initial;
 }
@@ -632,21 +600,31 @@ html.hidescroll {
 }
 .bannersBox .bannersItem .left,
 .bannersBox .bannersItem .right {
-  width: 30px;
-  height: 160px;
+  width: 60px;
+  height: 640px;
   background-size: 50%;
   filter: invert(100%) brightness(120%);
 }
 .bannersBox .bannersItem .cover li {
   background: transparent url() no-repeat center top;
-  background-size: 100% 160px;
+  background-size: auto 85%;
+  background-position: center 20%;
+}
+.bannersBox .bannersItem .cover li img{
+  max-width: 95%;
+  max-height: calc(100% - 100px);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 45%;
+  left: 50%;
 }
 .bannersBox .bannersItem .cover li a {
-  height: 160px;
+  height: 580px;
 }
 .bannersBox .bannersItem ol {
   bottom: 0px;
   transform: translateY(35px);
+  display: none;
 }
 .bannersBox .bannersItem ol li {
   margin: 10px 5px;
@@ -658,7 +636,9 @@ html.hidescroll {
   background-color: #0c86c8;
 }
 .bannersBox .bannersText {
-  padding: 5px 10px;
+  padding: 0px 10px;
   line-height: 1.6;
+  font-weight: bold;
+  text-align: center;
   word-break: break-all;
 }
